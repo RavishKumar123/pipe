@@ -1,0 +1,46 @@
+
+<mat-card>
+    <mat-card-content class="flex-space-between">
+      <button mat-raised-button color="primary" (click)="openDialog()" style="height:40px;">Add deal</button>
+      <div style="width:20%;float: left;">
+        <mat-form-field>
+            <mat-select placeholder="Select Pipeline" >
+              <mat-option *ngFor="let pipe of piplines" (click)="changePipeline(pipe.id)" value="{{pipe.id}}">{{pipe.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-content>
+        <div class="taskboard page-height" >
+          <div class="taskboard-wrapper" *ngFor="let board of pipe.pipedrive;let i = index">
+            <div class="taskboard-list" [ngClass]="board.class">
+              <div class="taskboard-header text-uppercase">
+                <strong>{{board.title}}</strong>
+              </div>
+                  
+              <div class="taskboard-cards" [dragula]='"task-group"'>
+                
+                <div class="taskboard-task" *ngFor="let task of board.tasks; let j = index" [ngClass]="task.class">
+                  <div id="left">
+                    <div class="taskboard-task-title">{{task.title}}</div>
+                    <span class="task-decription">{{task.description}}</span>
+                  </div>
+                  <div id="right">
+                    <mat-icon style="float:right" [matMenuTriggerFor]="menu">menu</mat-icon>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item (click)="delete(i,j)" >Delete</button>
+                      <button mat-menu-item>Lost</button>
+                      <button mat-menu-item>Won</button>
+                    </mat-menu>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
