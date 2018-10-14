@@ -25,7 +25,7 @@
         </a>
         <a class="" appAccordionToggle href="javascript:;" *ngIf="menuitem.type === 'sub'">
             <mat-icon>{{ menuitem.icon }}</mat-icon> 
-            <span>{{ menuitem.name }}</span> 
+            <span>{{ menuitem.name }}vvv</span> 
             <span fxFlex></span> 
             <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
             <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon>
@@ -36,12 +36,7 @@
             </mat-list-item>
         </mat-nav-list>
         <div class="saperator text-muted" *ngIf="menuitem.type === 'saperator'">
-            <span>{{ menuitem.name }}</span> 
+            <span>{{ menuitem.name }}333</span> 
         </div>
     </mat-list-item>
 </mat-nav-list>
-<!-- <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field> -->

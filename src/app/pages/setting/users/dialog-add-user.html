@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add User</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Username" [(ngModel)]="data.animal" #name>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Permission" [(ngModel)]="data.name" #perm>
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+
+    <button mat-raised-button color="primary" style="width:20%" (click)="onSave(name.value, perm.value)">Save</button>
+    <button mat-raised-button color="primary" style="width:20%" (click)="onNoClick()">Cancel</button>
+
+    <!-- <button mat-raised-button color="primary" (click)="openDialog()">Add Pipeline</button>
+        <button mat-raised-button color="primary" (click)="openDialog()">Add Stage</button> -->
+
+</div>

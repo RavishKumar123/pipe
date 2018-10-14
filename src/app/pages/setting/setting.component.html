@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <button  mat-raised-button color="primary" style="width: 250px;">Profile</button>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <button routerLink="users" mat-raised-button color="primary" style="width: 250px;">Manage Users</button>
+
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <button routerLink="pipeline" mat-raised-button color="primary" style="width: 250px;">Manage Pipeline</button>
+
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

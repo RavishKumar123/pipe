@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Add User</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Email address" [(ngModel)]="data.animal">
+        <!-- <input matInput placeholder="Email address" type="email" [formControl]="form.controls['email']"> -->
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="First Name" [(ngModel)]="data.animal">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Last Name" [(ngModel)]="data.animal">
+
+    </mat-form-field>
+
+
+</div>
+
+<div mat-dialog-actions>
+        
+        <button  mat-raised-button color="primary" (click)="onNoClick()" style="width:20%">Cancel</button> 
+         <button  mat-raised-button color="primary" style="width: 40%" >Confirm and Invite</button>
+            
+        <!-- <button mat-raised-button color="primary" (click)="openDialog()">Add Pipeline</button>
+        <button mat-raised-button color="primary" (click)="openDialog()">Add Stage</button> -->
+
+</div>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

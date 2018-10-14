@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12" style=" margin-top: 10px;">
+      <h3>Pipeline</h3>
+      <hr>
+      <!-- <button mat-raised-button color="primary" (click)="openDialog()">Add Pipeline</button> -->
+      <button mat-raised-button color="primary" (click)="openDialogPipeline()">Add Pipeline</button>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let pipe of pipeline let i = index" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{pipe.id}}
+            </mat-panel-title>
+            <mat-panel-description>
+              <tr>
+              <td width="100px">
+                {{pipe.name}}
+              </td>
+              <td align="right">
+                  <button style="margin-left: 350px;" mat-raised-button color="primary" (click)="openDialogPipeline()">Edit Stage</button>
+
+              </td>
+            </tr>
+
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <table>
+            <!-- stage times loop -->
+            <tr *ngFor="let s of pipe.stages let j = index">
+              <td *ngIf="(pipe.id == i+1)">
+              </td>
+              <td>
+                <p align="center">{{pipe.stages[j]}}</p>
+                <hr>
+              </td>
+
+            </tr>
+          </table>
+          
+        </mat-expansion-panel>
+        
+      </mat-accordion>
+
+    </div>
+  </div>
+</div>

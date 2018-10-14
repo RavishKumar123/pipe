@@ -5,6 +5,7 @@ import { CustomValidators } from 'ng2-validation';
 
 const password = new FormControl('', Validators.required);
 const confirmPassword = new FormControl('', CustomValidators.equalTo(password));
+const terms = new FormControl('', Validators.required);
 
 @Component({
   selector: 'app-register',
@@ -20,11 +21,16 @@ export class RegisterComponent implements OnInit {
     this.form = this.fb.group( {
       email: [null, Validators.compose([Validators.required, CustomValidators.email])],
       password: password,
-      confirmPassword: confirmPassword
+      confirmPassword: confirmPassword,
+      terms: terms
     } );
   }
 
   onSubmit() {
-    this.router.navigate( ['/'] );
+    alert("Successfuly Registered");
+    console.log(this.form.get('email').value);
+    console.log(this.form.get('password').value);
+
+    this.router.navigate(['/dashboards/dashboard1']);
   }
 }

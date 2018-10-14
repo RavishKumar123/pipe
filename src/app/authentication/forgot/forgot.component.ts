@@ -20,6 +20,7 @@ export class ForgotComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.form.get('email').value);
     this.router.navigate ( ['/authentication/login'] );
   }
 

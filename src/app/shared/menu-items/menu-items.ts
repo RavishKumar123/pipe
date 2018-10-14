@@ -167,7 +167,7 @@ const MENUITEMS = [
     ]
   },{
     state: 'pages',
-    name: 'Pages',
+    name: 'Pagex',
     type: 'sub',
     icon: 'content_copy',
     
@@ -176,7 +176,8 @@ const MENUITEMS = [
       {state: 'timeline', name: 'Timeline'},
       {state: 'invoice', name: 'Invoice'}, 
       {state: 'pricing', name: 'Pricing'},
-      {state: 'helper', name: 'Helper Classes'}  
+      {state: 'helper', name: 'Helper Classes'},  
+      {state: 'profile', name: 'Profile'}  
     ]
   }
     

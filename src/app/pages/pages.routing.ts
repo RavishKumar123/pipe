@@ -5,6 +5,9 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HelperComponent } from './helper-classes/helper.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SettingComponent } from './setting/setting.component';
+
 
 export const PagesRoutes: Routes = [
   {
@@ -24,6 +27,14 @@ export const PagesRoutes: Routes = [
     },{
       path: 'helper', 
       component: HelperComponent
+    },
+    {
+      path: 'profile', 
+      component: ProfileComponent
+    },
+    {
+      path: 'setting',
+      loadChildren: './setting/setting.module#SettingModule'
     }]
   }
 ];

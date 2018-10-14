@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add User</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Title of Pipeline" [(ngModel)]="data.animal">
+    </mat-form-field>
+    <mat-form-field>
+            <input matInput placeholder="Stage Name" [(ngModel)]="data.animal">
+            <mat-icon style="cursor: pointer; float:right;">add_box</mat-icon>
+        </mat-form-field>
+    
+
+</div>
+
+<div mat-dialog-actions>
+        
+        <button  mat-raised-button color="primary"  style="width:20%">Save</button> 
+         <button  mat-raised-button color="primary" style="width:20%" (click)="onNoClick()">Cancel</button>
+            
+        <!-- <button mat-raised-button color="primary" (click)="openDialog()">Add Pipeline</button>
+        <button mat-raised-button color="primary" (click)="openDialog()">Add Stage</button> -->
+
+</div>
+

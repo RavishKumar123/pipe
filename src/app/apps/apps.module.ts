@@ -14,11 +14,6 @@ import { ChatComponent } from './chat/chat.component';
 import { CalendarDialogComponent } from './fullcalendar/fullcalendar.component';
 import { DialogDataExampleDialog } from './mail/mail.component';
 import { TaskboardComponent } from './taskboard/taskboard.component';
-import { PipedriveService } from "../Services/pipedrive.service";
-import { AddDrealComponent } from './add-dreal/add-dreal.component';
-import { FormsModule,ReactiveFormsModule} from "@angular/forms";
-import { OrganizationsComponent } from './organizations/organizations.component';
-import { AddOrganizationComponent } from './add-organization/add-organization.component';
 
 @NgModule({
   imports: [
@@ -29,9 +24,7 @@ import { AddOrganizationComponent } from './add-organization/add-organization.co
     FlexLayoutModule,
     QuillModule,
     DragulaModule,  
-    PerfectScrollbarModule,
-    FormsModule,
-    ReactiveFormsModule
+    PerfectScrollbarModule
   ],
   declarations: [
     FullcalendarComponent,
@@ -39,13 +32,9 @@ import { AddOrganizationComponent } from './add-organization/add-organization.co
     DialogDataExampleDialog,
     ChatComponent,
     CalendarDialogComponent,
-    TaskboardComponent,
-    AddDrealComponent,
-    OrganizationsComponent,
-    AddOrganizationComponent  
+    TaskboardComponent  
   ],
-  providers: [PipedriveService],
-  entryComponents: [ CalendarDialogComponent, DialogDataExampleDialog,AddDrealComponent,AddOrganizationComponent],
+  entryComponents: [ CalendarDialogComponent, DialogDataExampleDialog ]
      
 })
 

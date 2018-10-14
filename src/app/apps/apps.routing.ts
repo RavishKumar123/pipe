@@ -4,7 +4,6 @@ import { FullcalendarComponent } from './fullcalendar/fullcalendar.component';
 import { MailComponent } from './mail/mail.component';
 import { ChatComponent } from './chat/chat.component';
 import { TaskboardComponent } from './taskboard/taskboard.component';
-import { OrganizationsComponent } from "./organizations/organizations.component";
 export const AppsRoutes: Routes = [{
   path: '',
   children: [{
@@ -19,9 +18,5 @@ export const AppsRoutes: Routes = [{
   }, {
     path: 'taskboard',
     component: TaskboardComponent
-  },
-{
-    path: 'organizations',
-    component: OrganizationsComponent
   }]
 }];

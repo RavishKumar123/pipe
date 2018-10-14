@@ -13,6 +13,9 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HelperComponent } from './helper-classes/helper.component';
+import { ProfileComponent } from './profile/profile.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -28,8 +31,11 @@ import { HelperComponent } from './helper-classes/helper.component';
     TimelineComponent,
     InvoiceComponent,
     PricingComponent,
-    HelperComponent  
+    HelperComponent,
+    ProfileComponent ,
   ],
+  entryComponents: []
+
 })
 
 export class PagesModule {}

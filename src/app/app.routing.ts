@@ -19,7 +19,7 @@ export const AppRoutes: Routes = [{
   }, {
     path: 'apps',
     loadChildren: './apps/apps.module#AppsModule'
-  }, {
+  },{ 
     path: 'forms',
     loadChildren: './forms/forms.module#FormModule'
   }, {
@@ -48,4 +48,6 @@ export const AppRoutes: Routes = [{
 }, {
   path: '**',
   redirectTo: 'authentication/404' 
-}];
+},
+
+];

@@ -2,8 +2,9 @@
     <div class="login-register-box">
         <mat-card>
             <mat-card-content>
+                    <!-- <p *ngIf="message" class="text-danger error">{{message}}</p> -->
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                    <div class="text-center"><img alt="homepage" src="assets/images/logo-icon.png"><h4 class="m-t-0">Login to App</h4></div>
+                    <div class="text-center"><img alt="homepage" src="assets/images/logo.png" height="150px" width="150px"><h4 class="m-t-0">Login to App</h4></div>
 
                     <div fxLayout="row" fxLayoutWrap="wrap">
                         <!-- col full-->

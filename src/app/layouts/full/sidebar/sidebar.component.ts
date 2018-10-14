@@ -2,7 +2,6 @@ import { ChangeDetectorRef, Component, NgZone, OnDestroy, ViewChild, HostListene
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
-import {PipedriveService } from "../../../Services/pipedrive.service";
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -11,23 +10,10 @@ import {PipedriveService } from "../../../Services/pipedrive.service";
 export class AppSidebarComponent {
   public config: PerfectScrollbarConfigInterface = {};
   mobileQuery: MediaQueryList;
-  piplines:Object[] = [{
-    name:"One",
-    id:"1"
-  },
-  {
-    name:"Two",
-    id:"2"
-  },
-  {
-    name:"Three",
-    id:"3"
-  }
-  ]
   
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public menuItems: MenuItems,private ps:PipedriveService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public menuItems: MenuItems) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -37,7 +23,4 @@ export class AppSidebarComponent {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
  
-  changePipeline(){
-     this.ps.findPipedriveById(1);
-  }
 }
